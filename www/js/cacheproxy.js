@@ -7,8 +7,10 @@ SearchCacheProxy.results = {}
 SearchCacheProxy.getData = function(request1) {
 	var apiUrl = this.apiUrl+"?jsoncallback=?";
 	//console.log(apiUrl);
+	alert(1);
 	$.getJSON( apiUrl, {apiKey: this.apiKey, q: request1 } )
 	  .success(function( json ) {
+		  alert(2);
 		  this.results=json.products;
 		//  $.each(json.products, function (i, val)  {
 		//	  console.log( "JSON Data: " + json.products );
